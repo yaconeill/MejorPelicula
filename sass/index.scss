@@ -1,0 +1,36 @@
+#catalog {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.film {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 5px;
+    & input {
+        margin-top: 5px;
+    }
+}
+
+img{
+    border-radius: 15px;
+}
+
+#catalog img {
+    cursor: pointer;
+    transition: .5s;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 3px 8px#888888;
+    }
+}
+
+#graphic {
+    width: 100%;
+    min-height: 450px;
+}
+#donutIcon{
+    height: 20px;
+}
