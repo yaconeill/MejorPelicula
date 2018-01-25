@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -32,8 +32,8 @@
                     <span class="sr-only">(página actual)</span>
                 </li>
             </ul>
-            <form class="form-inline user my-2 my-lg-0">
-            </form>
+            <div class="form-inline user my-2 my-lg-0">
+            </div>
         </div>
     </nav>
     <div class="container" tabindex="0">
@@ -43,31 +43,20 @@
                 <!-- <p class="lead">Mejores películas</p> -->
                 <hr class="my-4">
                 <div class="col-md-3 mx-auto">
-                    <div class="btn-group btn-group-toggle" tabindex="0" data-toggle="buttons"  aria-label="En el siguiente paso moverse con cursores para elegir en que tipo de gráfico se representan los resultados">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons"  aria-label="En el siguiente paso moverse con cursores para elegir en que tipo de gráfico se representan los resultados">
                         <label class="btn btn-primary">
                             <input type="radio" name="graphic" id="donut" title="Gráfica donut" aria-label="Gráfica donut" autocomplete="off">
                             <img src="../img/donut.svg" id="donutIcon" alt="Gráfica donut">
                         </label>
                         <label class="btn btn-primary">
-                            <input type="radio" name="graphic" id="bar" autocomplete="off" title="Gráfica de barras" aria-label="Gráfica de barras">
-                            <i class="fa fa-bar-chart"></i>
+                            <input type="radio" name="graphic" id="chart" autocomplete="off" title="Gráfica de función" aria-label="Gráfica de función">
+                            <i class="fa fa-line-chart"></i>
                         </label>
                         <label class="btn btn-primary">
                             <input type="radio" name="graphic" id="pie" autocomplete="off" title="Gráfica de tarta" aria-label="Gráfica de tarta">
                             <i class="fa fa-pie-chart"></i>
                         </label>
                     </div>
-                    <!-- <div class="btn-group" role="group">
-                        <button class="btn btn-primary" type="button" id="donut" title="Gráfica donut" aria-label="Gráfica donut">
-                            <img src="../img/donut.svg" id="donutIcon" alt="Gráfica donut">
-                        </button>
-                        <button class="btn btn-primary" type="button" id="bar" title="Gráfica de barras" aria-label="Gráfica de barras">
-                            <i class="fa fa-bar-chart"></i>
-                        </button>
-                        <button class="btn btn-primary" type="button" id="pie" title="Gráfica de tarta" aria-label="Gráfica de tarta">
-                            <i class="fa fa-pie-chart"></i>
-                        </button>
-                    </div> -->
                 </div>
                 <div id="graphic" tabindex="0" aria-live="polite"></div>
             </div>

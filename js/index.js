@@ -1,22 +1,21 @@
 $(document).ready(function () {
+    $('body').css("background-image", "url(img/bg1.png"); 
     var filmCatalog = [];
     var $catalog = $('#catalog')
-    Film = function (name, id, img, rate) {
+    Film = function (name, id, img, rate, description) {
         this.name = name;
         this.id = id;
         this.img = img;
-        this.rate = rate
+        this.rate = rate;
+        this.description = description;
     }
     isLogin();
 
-    filmCatalog = JSON.parse(localStorage.getItem('tazas'));
+    filmCatalog = JSON.parse(localStorage.getItem('rating'));
     if (filmCatalog == null) {
-        transferData();
-    } else if (filmCatalog.length == 0) {
-        transferData();
-    } else {
+        filmCatalog = [];
         for (var i in films) {
-            let film = new Film(films[i].name, films[i].id, films[i].img, films[i].rate);
+            let film = new Film(films[i].name, films[i].id, films[i].img, films[i].rate, films[i].sinopsis);
             filmCatalog.push(film);
         };
     }
@@ -50,8 +49,7 @@ $(document).ready(function () {
     localStorage.setItem('rating', JSON.stringify(filmCatalog));
 
     function transferData() {
-        filmCatalog = [];
-        films.forEach(function (e) {
+        filmCatalog.forEach(function (e) {
             filmCatalog.push(e);
         });
     }
@@ -59,7 +57,7 @@ $(document).ready(function () {
         localStorage.removeItem('currentUser');
         location.reload();
     });
-    
+
     // $('img').hover(function () {
     //     $(`img:not(#${$(this).attr('id')})`).css("filter", "blur(2px)");
     // },

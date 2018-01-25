@@ -14,10 +14,6 @@
     }
 }
 
-img{
-    border-radius: 15px;
-}
-
 #catalog img {
     cursor: pointer;
     transition: .5s;
@@ -31,6 +27,12 @@ img{
     width: 100%;
     min-height: 450px;
 }
-#donutIcon{
+
+#donutIcon {
     height: 20px;
 }
+
+// body {
+//     // background: url(../img/bg1.png);
+//     // opacity: 0.8;
+// }

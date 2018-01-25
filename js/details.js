@@ -10,30 +10,40 @@ $(document).ready(function () {
     var $section = $('#section');
     isNewUser(userName, $section);
     var userList = JSON.parse(localStorage.getItem('userList'));
-    if (userList == null) {
+    if (userList == null)
         userList = [];
-    } else if (userList.length == 0) {
-        userList = [];
-    }
 
     var selectedFilm = localStorage.getItem('selectedFilm');
     var filmCatalog = JSON.parse(localStorage.getItem('rating'));
+
 
     var $film = $(this).prev().attr('id');
     var $film = $(this).attr('id');
 
     var $movieDetails = $('#movieDetails');
     var tmpFilm;
+    var url;
     filmCatalog.find(o => {
-        if (o.id === selectedFilm)
+        if (o.id === selectedFilm) {
             tmpFilm = o;
+            // url = o.img;
+        }
     });
+    bgImg.forEach(e => {
+        if (e.id == selectedFilm)
+            url = e.img;
+    });
+    $('body').css('background-image', `url(../${url}`);
+    $('body').css('background-repeat', 'no-repeat');
+    // $('body').css('background-size', '100%');
+    $('body').css('background-attachment', 'fixed');
+    $('.jumbotron').css('opacity', '0.9')
     $movieDetails.children().remove();
     $movieDetails.append($('<div class="film">'));
     $('.title').text(tmpFilm.name);
     $movieDetails.children('div').append(
         $(`<img src="../${tmpFilm.img}" title="${tmpFilm.name}" alt="${tmpFilm.name}" id="${tmpFilm.id}"/>`));
-    $('.sinopsis').text(tmpFilm.sinopsis)
+    $('.sinopsis').text(tmpFilm.description);
 
     var $form = $('#register');
     $form.submit(function () {
@@ -91,6 +101,6 @@ function isNewUser(userName, $section) {
         $section.children().remove();
         $section.append($('<div class="col-md-1 mx-auto">'));
         $section.children('div').append($(`<input type="button"
-        value="Votar" id="vote" class="btn btn-success rate"/>`));
+        value="Votar" id="vote" class="btn btn-success rate" autofocus/>`));
     }
 }
