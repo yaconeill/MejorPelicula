@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" media="screen" rel="stylesheet" type="text/css" />    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
@@ -27,7 +26,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="results.html">Resultados de votación</a>
+                    <a class="nav-link" href="results.html">Resultados de las votaciones</a>
                 </li>
             </ul>
 
@@ -61,15 +60,15 @@
                         <form id="register">
                             <div class="form-group">
                                 <label for="name">Nombre</label>
-                                <input type="text" class="form-control" id="name" aria-label="Escribir nombre" aria-labelledby="p1" required>
+                                <input type="text" class="form-control" id="name" aria-label="Escribir nombre" aria-required="true">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Teléfono</label>
-                                <input type="text" class="form-control" maxlength="9" pattern="[0-9]{9}" id="phone" aria-label="Escribir número de teléfono" required>
+                                <input type="text" class="form-control" maxlength="9" pattern="[0-9]{9}" id="phone" aria-label="Escribir número de teléfono" aria-required="true">
                             </div>
                             <div class="form-group">
                                 <label for="email">Correo electrónico</label>
-                                <input type="email" class="form-control" id="email" aria-label="Escribir correo electrónico" required>
+                                <input type="email" class="form-control" id="email" aria-label="Escribir correo electrónico" aria-required="true">
                             </div>
                             <button type="submit" class="btn btn-primary" aria-label="Botón para registrar los datos y entrar en el sorteo">Enviar datos</button>
                         </form>
@@ -84,7 +83,6 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="../js/data.js"></script>
     <script src="../js/background.js"></script>
     <script src="../js/common.js"></script>

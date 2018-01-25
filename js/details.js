@@ -53,7 +53,6 @@ $(document).ready(function () {
         userList.push(user);
         localStorage.setItem('userList', JSON.stringify(userList));
         localStorage.setItem('currentUser', $userData[0].value);
-        // localStorage.setItem('selectedFilm', selectedFilm);
         isLogin();
         $section.children().remove();
         isNewUser(userName, $section);
@@ -90,9 +89,6 @@ $(document).ready(function () {
         } else {
             alert('Solo se puede votar una vez');
         }
-
-        // $('#confirmVote').modal('hide');
-        // $('.rate').prop('disable', true).addClass('disabled');
     });
 });
 
@@ -101,6 +97,6 @@ function isNewUser(userName, $section) {
         $section.children().remove();
         $section.append($('<div class="col-md-1 mx-auto">'));
         $section.children('div').append($(`<input type="button"
-        value="Votar" id="vote" class="btn btn-success rate" autofocus/>`));
+        value="Votar" id="vote" aria-label="Al hacer click realizará su voto y se redigirirá automáticamente a los resultados. Solo se puede votar una vez" class="btn btn-success rate" autofocus/>`));
     }
 }
