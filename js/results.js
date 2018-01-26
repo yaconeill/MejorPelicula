@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('body').css("background-image", "url(../img/bg1.png"); 
+    $('body').css("background-image", "url(../img/bg1.jpg"); 
     isLogin();
     var selectedFilm = localStorage.getItem('selectedFilm');
     var filmCatalog = JSON.parse(localStorage.getItem('rating'));

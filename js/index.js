@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('body').css("background-image", "url(img/bg1.png");
+    $('body').css("background-image", "url(img/bg1.jpg");
     var filmCatalog = [];
     var $catalog = $('#catalog')
     Film = function (name, id, img, rate, description) {
