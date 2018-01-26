@@ -83,7 +83,7 @@ $(document).ready(function () {
             localStorage.setItem('userList', JSON.stringify(userList));
             alert('Ha votado por ' + film + '. Gracias por participar. Se autoredigirirá en 3 segundos.');
             setTimeout(function () {
-                window.location.replace("../pages/results.html");
+                window.location.href = "pages/results.html";
             }, 3000);
 
         } else {
