@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('body').css("background-image", "url(img/bg1.png"); 
+    $('body').css("background-image", "url(img/bg1.png");
     var filmCatalog = [];
     var $catalog = $('#catalog')
     Film = function (name, id, img, rate, description) {
@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     function openDetails(id) {
         localStorage.setItem('selectedFilm', id);
-        window.location.replace("../pages/movieDetails.html");
+        window.location.href = "../pages/movieDetails.html";
     }
     localStorage.setItem('rating', JSON.stringify(filmCatalog));
 
