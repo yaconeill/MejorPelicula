@@ -33,7 +33,7 @@ $(document).ready(function () {
         if (e.id == selectedFilm)
             url = e.img;
     });
-    $('body').css('background-image', `url(../${url}`);
+    $('body').css('background-image', `url(${url}`);
     $('body').css('background-repeat', 'no-repeat');
     // $('body').css('background-size', '100%');
     $('body').css('background-attachment', 'fixed');
