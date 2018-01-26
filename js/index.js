@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     function openDetails(id) {
         localStorage.setItem('selectedFilm', id);
-        window.location.href = "../pages/movieDetails.html";
+        window.location.href = "pages/movieDetails.html";
     }
     localStorage.setItem('rating', JSON.stringify(filmCatalog));
 
