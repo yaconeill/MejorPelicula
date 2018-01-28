@@ -44,7 +44,7 @@ $(document).ready(function () {
             var data = google.visualization.arrayToDataTable(dataGraphic);
 
             var options = {
-                title: 'Puntuación',
+                title: 'Películas mejor valoradas',
                 curveType: 'function',
                 legend: { position: 'bottom' }
             };
