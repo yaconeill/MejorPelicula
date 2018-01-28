@@ -44,7 +44,7 @@ $(document).ready(function () {
             var data = google.visualization.arrayToDataTable(dataGraphic);
 
             var options = {
-                title: 'Películas mejor valoradas',
+                title: 'Puntuación',
                 curveType: 'function',
                 legend: { position: 'bottom' }
             };
@@ -52,30 +52,6 @@ $(document).ready(function () {
             var chart = new google.visualization.LineChart(document.getElementById('graphic'));
 
             chart.draw(data, options);
-            // google.charts.load('current', { 'packages': ['bar'] });
-            // google.charts.setOnLoadCallback(drawStuff);
-
-            // function drawStuff() {
-            //     var data = new google.visualization.arrayToDataTable(dataGraphic);
-
-            //     var options = {
-            //         // width: 800,
-            //         legend: { position: 'none' },
-            //         chart: {
-            //             title: 'Películas mejor valoradas',
-            //             subtitle: 'popularidad por número de votos'
-            //         }
-            //         // ,axes: {
-            //         //     x: {
-            //         //         0: { side: 'top', label: 'Resultado de la votación' } // Top x-axis.
-            //         //     }
-            //         // },
-            //         // bar: { groupWidth: "90%" }
-            //     };
-
-            //     var chart = new google.charts.Bar(document.getElementById('graphic'));
-            //     // Convert the Classic options to Material options.
-            //     chart.draw(data, google.charts.Bar.convertOptions(options));
         };
     });
     // #endregion
@@ -96,10 +72,6 @@ $(document).ready(function () {
             var chart = new google.visualization.PieChart(document.getElementById('graphic'));
             chart.draw(data, options);
         }
-        // }
-        // $(window).resize(function () {
-        //     drawChart();
-        // });
     });
     // #endregion
     $('#logout').click(function () {
