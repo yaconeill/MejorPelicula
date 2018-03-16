@@ -35,7 +35,7 @@ $(document).ready(function () {
     });
     $('body').css('background-image', `url(${url}`);
     $('body').css('background-repeat', 'no-repeat');
-    // $('body').css('background-size', '100%');
+    $('body').css('background-size', 'cover');
     $('body').css('background-attachment', 'fixed');
     $('.jumbotron').css('opacity', '0.9')
     $movieDetails.children().remove();
